@@ -1,0 +1,19 @@
+services:
+  coredns:
+    container_name: coredns-primary
+    build:
+      context: .
+      dockerfile: coredns.dockerfile
+    restart: unless-stopped
+    command: [ "-conf", "/corefile" ]
+    # ports:
+    #   - 5354:53
+    dns:
+      - 1.1.1.1
+    networks:
+      kind:
+        ipv4_address: 172.18.0.2
+
+networks:
+  kind:
+    external: true
