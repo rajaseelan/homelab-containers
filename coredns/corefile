@@ -1,3 +1,8 @@
+k8s.thehpc.ninja {
+  log
+  file /k8s.thehpc.ninja.zone
+}
+
 . {
   log
   forward . tls://9.9.9.9 tls://149.112.112.112 {

@@ -1,0 +1,15 @@
+$ORIGIN k8s.thehpc.ninja.
+@   3600 IN SOA    ns1.k8s.thehpc.ninja. zone-admin.k8s.thehpc.ninja. (
+    20231225                        ; serial
+    300                             ; refresh period
+    180                             ; retry period
+    180                             ; expire time
+    180 )                           ; minimum ttl
+
+    3600    IN NS ns1.k8s.thehpc.ninja.
+
+ns1             IN  A   172.18.0.2
+mk8s-01-cp-01   IN  A   192.168.252.70
+mk8s-01-w-01    IN  A   192.168.252.71
+mk8s-01-w-02    IN  A   192.168.252.72
+
